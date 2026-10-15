@@ -1,18 +1,7 @@
 import { useState } from 'react';
 
-function Square() {
-  const[value, setValue]=useState(null);
-  function HandleClick(){
-    setValue('X');
-  }
-  return (
-    <button 
-      className="square"
-      onClick={HandleClick}
-    >
-      {value}
-    </button>
-    );
+function Square({ value }) {
+  return <button className="square">{value}</button>;
 }
 
 export default function Board() {
